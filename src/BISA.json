@@ -1,0 +1,30 @@
+{
+	"instructions" : [
+		{"name" : "NOP", "opcode" : "0x00", "operands" : []},
+		{"name" : "ADD", "opcode" : "0x01", "operands" : ["rd", "r1", "r2"]},
+		{"name" : "SUB", "opcode" : "0x02", "operands" : ["rd", "r1", "r2"]},
+		{"name" : "MUL", "opcode" : "0x03", "operands" : ["rd", "r1", "r2"]},
+		{"name" : "DIV", "opcode" : "0x04", "operands" : ["rd", "r1", "r2"]},
+		{"name" : "AND", "opcode" : "0x05", "operands" : ["rd", "r1", "r2"]},
+		{"name" : "OR", "opcode" : "0x06", "operands" : ["rd", "r1", "r2"]},
+		{"name" : "XOR", "opcode" : "0x07", "operands" : ["rd", "r1", "r2"]},
+		{"name" : "NOT", "opcode" : "0x08", "operands" : ["rd", "r1", "r2"]},
+		{"name" : "SHL", "opcode" : "0x09", "operands" : ["rd", "r1", "imm"]},
+		{"name" : "SHR", "opcode" : "0x0A", "operands" : ["rd", "r1", "imm"]},
+		{"name" : "LDI", "opcode" : "0x0B", "operands" : ["rd", "imm"]},
+		{"name" : "LD", "opcode" : "0x0C", "operands" : ["rd", "r1", "imm"]},
+		{"name" : "ST", "opcode" : "0x0D", "operands" : ["rd", "r1", "imm"]},
+		{"name" : "MOV", "opcode" : "0x0E", "operands" : ["rd", "r1"]},
+		{"name" : "JMP", "opcode" : "0x0F", "operands" : ["imm"]},
+		{"name" : "BEQ", "opcode" : "0x10", "operands" : ["r1", "r2", "imm"]},
+		{"name" : "BNE", "opcode" : "0x11", "operands" : ["r1", "r2", "imm"]},
+		{"name" : "CALL", "opcode" : "0x12", "operands" : ["imm"]},
+		{"name" : "RET", "opcode" : "0x13", "operands" : []}
+	],
+	"operand-types" : {
+		"rd" : {"type" : "register", "bits" : 4, "shift" : 8},
+		"r1" : {"type" : "register", "bits" : 4, "shift" : 4},
+		"r2" : {"type" : "register", "bits" : 4, "shift" : 0},
+		"imm" :{"type" : "immediate", "bits" : 8, "shift" : 0}
+	}
+}

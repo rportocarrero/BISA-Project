@@ -1,0 +1,8 @@
+{
+	"instructions" : [
+		{"name" : "NOP", "opcode" : "0x00", "operands" : []}
+	],
+	"operand-types" : {
+		"rd" : {"type" : "register", "bits" : 4, "shift" : 8}
+	}
+}
